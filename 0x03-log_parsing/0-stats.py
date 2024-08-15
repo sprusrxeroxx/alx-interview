@@ -77,7 +77,6 @@ def run():
     '''
     line_num = 0
     total_file_size = 0
-    counter = 0
     status_codes_stats = {
         '200': 0,
         '301': 0,
@@ -89,13 +88,12 @@ def run():
         '500': 0,
     }
     try:
-        while True & counter < 10 :
+        while True:
             line = input()
             total_file_size = update_metrics(
                 line,
                 total_file_size,
                 status_codes_stats,
-                counter += 1
             )
             line_num += 1
             if line_num % 10 == 0:
