@@ -1,6 +1,6 @@
 #!/usr/bin/node
-const util = require('util');
-const request = util.promisify(require('request'));
+import { promisify } from 'util';
+const request = promisify(require('request'));
 const filmID = process.argv[2];
 
 async function starwarsCharacters (filmId) {
